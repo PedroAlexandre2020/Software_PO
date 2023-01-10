@@ -17,9 +17,12 @@ class Ui_Calcula_Coeficiente(object):
         Calcula_Coeficiente.resize(800, 600)
         self.centralwidget = QtWidgets.QWidget(Calcula_Coeficiente)
         self.centralwidget.setObjectName("centralwidget")
-        self.botao_calcula_coeficiente = QtWidgets.QPushButton(self.centralwidget)
-        self.botao_calcula_coeficiente.setGeometry(QtCore.QRect(120, 180, 75, 23))
-        self.botao_calcula_coeficiente.setObjectName("botao_calcula_coeficiente")
+        self.botao_calcula_coeficiente = QtWidgets.QPushButton(
+            self.centralwidget)
+        self.botao_calcula_coeficiente.setGeometry(
+            QtCore.QRect(120, 180, 75, 23))
+        self.botao_calcula_coeficiente.setObjectName(
+            "botao_calcula_coeficiente")
         self.botao_coeficiente_sair = QtWidgets.QPushButton(self.centralwidget)
         self.botao_coeficiente_sair.setGeometry(QtCore.QRect(240, 180, 75, 23))
         self.botao_coeficiente_sair.setObjectName("botao_coeficiente_sair")
@@ -57,7 +60,8 @@ class Ui_Calcula_Coeficiente(object):
 
         self.retranslateUi(Calcula_Coeficiente)
         self.botao_coeficiente_sair.clicked.connect(Calcula_Coeficiente.close)
-        self.botao_calcula_coeficiente.clicked.connect(self.abrir_software)
+        self.botao_calcula_coeficiente.clicked.connect(
+            self.calculo_coeficiente)
         QtCore.QMetaObject.connectSlotsByName(Calcula_Coeficiente)
 
     def calculo_coeficiente(self):
@@ -69,26 +73,30 @@ class Ui_Calcula_Coeficiente(object):
 
         result_coeficiente = (((qtd_func*sal_func) + aluguel + agua) / qtd_m2)
 
+        from software import Ui_Software
+
+        
+
         return result_coeficiente
-
-    def abrir_software(self):
-        from Software_Custos_definidos import Ui_Software_Custos_Definidos
-        self.janela = QtWidgets.QMainWindow()
-        self.software = Ui_Software_Custos_Definidos()
-        self.software.setupUi(self.janela)
-        self.janela.show()
-
 
     def retranslateUi(self, Calcula_Coeficiente):
         _translate = QtCore.QCoreApplication.translate
-        Calcula_Coeficiente.setWindowTitle(_translate("Calcula_Coeficiente", "Calculo do Coeficiente"))
-        self.botao_calcula_coeficiente.setText(_translate("Calcula_Coeficiente", "Calcular"))
-        self.botao_coeficiente_sair.setText(_translate("Calcula_Coeficiente", "Sair"))
-        self.label.setText(_translate("Calcula_Coeficiente", "Quantidade de Funcionarios"))
-        self.label_2.setText(_translate("Calcula_Coeficiente", "Salario dos Funcionários"))
-        self.label_3.setText(_translate("Calcula_Coeficiente", "Custo de Aluguel"))
-        self.label_4.setText(_translate("Calcula_Coeficiente", "Custo de Água"))
-        self.label_5.setText(_translate("Calcula_Coeficiente", "Quantidade de M2 Produzidos"))
+        Calcula_Coeficiente.setWindowTitle(_translate(
+            "Calcula_Coeficiente", "Calculo do Coeficiente"))
+        self.botao_calcula_coeficiente.setText(
+            _translate("Calcula_Coeficiente", "Calcular"))
+        self.botao_coeficiente_sair.setText(
+            _translate("Calcula_Coeficiente", "Sair"))
+        self.label.setText(_translate("Calcula_Coeficiente",
+                           "Quantidade de Funcionarios"))
+        self.label_2.setText(_translate(
+            "Calcula_Coeficiente", "Salario dos Funcionários"))
+        self.label_3.setText(_translate(
+            "Calcula_Coeficiente", "Custo de Aluguel"))
+        self.label_4.setText(_translate(
+            "Calcula_Coeficiente", "Custo de Água"))
+        self.label_5.setText(_translate(
+            "Calcula_Coeficiente", "Quantidade de M2 Produzidos"))
 
 
 if __name__ == "__main__":
