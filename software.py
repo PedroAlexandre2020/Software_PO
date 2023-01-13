@@ -179,6 +179,42 @@ class Ui_Software(object):
         self.label_14.setText(_translate(
             "Software", " insira e complete os dados restantes"))
 
+    def retorna_custos_pvc(self, indice):
+        if indice > 3 or indice < 0:
+            return
+
+        custo1 = float(self.custo_pvc_branco.text())
+        custo2 = float(self.custo_pvc_verde.text())
+        custo3 = float(self.custo_pvc_p.text())
+        vet = [custo1, custo2, custo3]
+        return vet[indice]
+
+    def retorna_limite(self):
+        limite = float(self.limite_gasto.text())
+        return limite
+
+    def retorna_frete(self):
+        frete_r = float(self.frete.text())
+        return frete_r
+
+    def retorna_imposto(self):
+        imposto_r = float(self.imposto.text())
+        return imposto_r
+
+    def retorna_preco_esteiras(self, indice):
+        if indice > 3 or indice < 0:
+            return
+        preco1 = float(self.preco_est1.text())
+        preco2 = float(self.preco_est2.text())
+        preco3 = float(self.preco_est3.text())
+        vet_precos = [preco1, preco2, preco3]
+
+        return vet_precos[indice]
+
+    def retorna_margem(self):
+        margem_r = float(self.valor_margem.text())
+        return margem_r
+
 
 if __name__ == "__main__":
     import sys
