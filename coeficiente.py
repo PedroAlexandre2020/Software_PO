@@ -44,18 +44,14 @@ class Ui_Calcula_Coeficiente(object):
         self.input_qtd_func = QtWidgets.QLineEdit(self.centralwidget)
         self.input_qtd_func.setGeometry(QtCore.QRect(180, 20, 113, 20))
         self.input_qtd_func.setObjectName("input_qtd_func")
-        self.input_salarios = QtWidgets.QLineEdit(self.centralwidget)
-        self.input_salarios.setGeometry(QtCore.QRect(180, 40, 113, 20))
-        self.input_salarios.setObjectName("input_salarios")
+
         self.input_Custo_Aluguel = QtWidgets.QLineEdit(self.centralwidget)
         self.input_Custo_Aluguel.setGeometry(QtCore.QRect(180, 60, 113, 20))
         self.input_Custo_Aluguel.setObjectName("input_Custo_Aluguel")
         self.input_Custo_Agua = QtWidgets.QLineEdit(self.centralwidget)
         self.input_Custo_Agua.setGeometry(QtCore.QRect(180, 80, 113, 20))
         self.input_Custo_Agua.setObjectName("input_Custo_Agua")
-        self.input_qtd_M2Produzido = QtWidgets.QLineEdit(self.centralwidget)
-        self.input_qtd_M2Produzido.setGeometry(QtCore.QRect(180, 100, 113, 20))
-        self.input_qtd_M2Produzido.setObjectName("input_qtd_M2Produzido")
+
         Calcula_Coeficiente.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(Calcula_Coeficiente)
@@ -66,16 +62,11 @@ class Ui_Calcula_Coeficiente(object):
 
     def calculo_coeficiente(self):
         qtd_func = int(self.input_qtd_func.text())
-        sal_func = int(self.input_salarios.text())
         aluguel = int(self.input_Custo_Aluguel.text())
         agua = int(self.input_Custo_Agua.text())
-        qtd_m2 = int(self.input_qtd_M2Produzido.text())
 
-        result_coeficiente = (((qtd_func*sal_func) + aluguel + agua) / qtd_m2)
 
-        from software import Ui_Software
-
-        
+        result_coeficiente = float((qtd_func * 0.45) + aluguel + agua)
 
         return result_coeficiente
 
@@ -89,14 +80,12 @@ class Ui_Calcula_Coeficiente(object):
             _translate("Calcula_Coeficiente", "Sair"))
         self.label.setText(_translate("Calcula_Coeficiente",
                            "Quantidade de Funcionarios"))
-        self.label_2.setText(_translate(
-            "Calcula_Coeficiente", "Salario dos Funcionários"))
+
         self.label_3.setText(_translate(
             "Calcula_Coeficiente", "Custo de Aluguel"))
         self.label_4.setText(_translate(
             "Calcula_Coeficiente", "Custo de Água"))
-        self.label_5.setText(_translate(
-            "Calcula_Coeficiente", "Quantidade de M2 Produzidos"))
+
 
 
 if __name__ == "__main__":
