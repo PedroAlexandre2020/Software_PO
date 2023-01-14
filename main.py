@@ -16,7 +16,6 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.btn_calc.clicked.connect(self.calcula)
         self.btn_sair.clicked.connect(lambda:self.close())
 
-#### Aqui começam os códigos que manipulam os widgets
     def calcula(self):
         custo_pvc_b = int(self.custo_pvc_b.text())
         custo_pvc_v = int(self.custo_pvc_v.text())
@@ -43,8 +42,6 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.quant_est_2.setText(str(q_est_2))
         self.quant_est_3.setText(str(q_est_3))
         self.lucro.setText(str(lucro))
-
-#### Aqui terminam os códigos que manipulam os widgets
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
