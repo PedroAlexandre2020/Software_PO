@@ -49,18 +49,20 @@ def otimiza (v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14):
 
     # Dados
     receita = (model.x1 * preco_est_1) + (model.x2 * preco_est_2) + (model.x3 * preco_est_3)
+    
     custo_unidade = (num_func * 0.45) + aluguel + agua
     custo_total_prod = custo_unidade * (model.x1 + model.x2 + model.x3)
     imposto_total = imposto * (model.x1 + model.x2 + model.x3)
-
-    # Função Objetivo
-    funcao_obj = receita - custo_total_prod - imposto_total
-    model.obj = Objective(expr = funcao_obj, sense = maximize)
-
-    # Restrições
+    
     custo_total_pvc_b = custo_pvc_b * ((model.x1 * 2) + (model.x2 * 3) + (model.x3 * 1))
     custo_total_pvc_v = custo_pvc_v * ((model.x1 * 6) + (model.x2 * 5) + (model.x3 * 2))
     custo_total_pvc_e = custo_pvc_e * ((model.x1 * 4) + (model.x2 * 1) + (model.x3 * 2))
+
+    # Função Objetivo
+    funcao_obj = receita - custo_total_prod - imposto_total - custo_total_pvc_b - custo_total_pvc_v - custo_total_pvc_e
+    model.obj = Objective(expr = funcao_obj, sense = maximize)
+
+    # Restrições
 
     model.c1 = Constraint(expr = custo_total_pvc_b <= lim_pvc_b)
     model.c2 = Constraint(expr = custo_total_pvc_v <= lim_pvc_v)
