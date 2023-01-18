@@ -1,412 +1,92 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
-  <property name="geometry">
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>767</width>
-    <height>614</height>
-   </rect>
-  </property>
-  <property name="palette">
-   <palette>
-    <active/>
-    <inactive/>
-    <disabled/>
-   </palette>
-  </property>
-  <property name="focusPolicy">
-   <enum>Qt::WheelFocus</enum>
-  </property>
-  <property name="windowTitle">
-   <string>Software Mega Correias</string>
-  </property>
-  <property name="windowIcon">
-   <iconset>
-    <normaloff>../../logo_correto.png</normaloff>../../logo_correto.png</iconset>
-  </property>
-  <property name="styleSheet">
-   <string notr="true"/>
-  </property>
-  <property name="iconSize">
-   <size>
-    <width>90</width>
-    <height>90</height>
-   </size>
-  </property>
-  <property name="animated">
-   <bool>false</bool>
-  </property>
-  <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="gridLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>10</y>
-      <width>731</width>
-      <height>611</height>
-     </rect>
-    </property>
-    <layout class="QGridLayout" name="gridLayout">
-     <item row="5" column="2">
-      <widget class="QLabel" name="label_9">
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>12</height>
-        </size>
-       </property>
-       <property name="lineWidth">
-        <number>-1</number>
-       </property>
-       <property name="text">
-        <string>PVC Ergométrico</string>
-       </property>
-      </widget>
-     </item>
-     <item row="6" column="2">
-      <widget class="QLineEdit" name="lim_pvc_e"/>
-     </item>
-     <item row="7" column="0">
-      <widget class="QLabel" name="label_5">
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>12</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <family>Microsoft JhengHei</family>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Preço de Venda das Correias( em R$):</string>
-       </property>
-      </widget>
-     </item>
-     <item row="6" column="0">
-      <widget class="QLineEdit" name="lim_pvc_b"/>
-     </item>
-     <item row="6" column="1">
-      <widget class="QLineEdit" name="lim_pvc_v"/>
-     </item>
-     <item row="8" column="0">
-      <widget class="QLabel" name="label_10">
-       <property name="text">
-        <string>Tipo 1</string>
-       </property>
-      </widget>
-     </item>
-     <item row="9" column="1">
-      <widget class="QLineEdit" name="preco_est_2"/>
-     </item>
-     <item row="9" column="2">
-      <widget class="QLineEdit" name="preco_est_3"/>
-     </item>
-     <item row="11" column="2">
-      <widget class="QLabel" name="label_16">
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>12</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>Água</string>
-       </property>
-      </widget>
-     </item>
-     <item row="12" column="0">
-      <widget class="QLineEdit" name="num_func"/>
-     </item>
-     <item row="9" column="0">
-      <widget class="QLineEdit" name="preco_est_1"/>
-     </item>
-     <item row="11" column="0">
-      <widget class="QLabel" name="label_14">
-       <property name="text">
-        <string>Número de Funcionários</string>
-       </property>
-      </widget>
-     </item>
-     <item row="8" column="1">
-      <widget class="QLabel" name="label_11">
-       <property name="text">
-        <string>Tipo 2</string>
-       </property>
-      </widget>
-     </item>
-     <item row="11" column="1">
-      <widget class="QLabel" name="label_15">
-       <property name="text">
-        <string>Aluguel</string>
-       </property>
-      </widget>
-     </item>
-     <item row="8" column="2">
-      <widget class="QLabel" name="label_12">
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>12</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>Tipo 3</string>
-       </property>
-      </widget>
-     </item>
-     <item row="10" column="0">
-      <widget class="QLabel" name="label_13">
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>12</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <family>Microsoft JhengHei</family>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Custos de Produção (em R$):</string>
-       </property>
-      </widget>
-     </item>
-     <item row="12" column="2">
-      <widget class="QLineEdit" name="agua"/>
-     </item>
-     <item row="13" column="0">
-      <widget class="QLabel" name="label_17">
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>12</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <family>Microsoft JhengHei</family>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Custos Fixos:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="15" column="0">
-      <widget class="QLabel" name="label_18">
-       <property name="text">
-        <string>Frete por Materiais(em R$)</string>
-       </property>
-      </widget>
-     </item>
-     <item row="16" column="1">
-      <widget class="QLineEdit" name="imposto"/>
-     </item>
-     <item row="19" column="0">
-      <widget class="QLabel" name="label_22">
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>12</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>Quantidade de Esteiras Tipo 1</string>
-       </property>
-      </widget>
-     </item>
-     <item row="19" column="1">
-      <widget class="QLabel" name="label_21">
-       <property name="text">
-        <string>Quantidade de Esteiras Tipo 2</string>
-       </property>
-      </widget>
-     </item>
-     <item row="15" column="1">
-      <widget class="QLabel" name="label_19">
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>12</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>Imposto Sobre venda ( valor decimal)</string>
-       </property>
-      </widget>
-     </item>
-     <item row="19" column="2">
-      <widget class="QLabel" name="label_23">
-       <property name="text">
-        <string>Quantidade de Esteiras Tipo 3</string>
-       </property>
-      </widget>
-     </item>
-     <item row="16" column="0">
-      <widget class="QLineEdit" name="frete"/>
-     </item>
-     <item row="12" column="1">
-      <widget class="QLineEdit" name="aluguel"/>
-     </item>
-     <item row="19" column="3">
-      <widget class="QLabel" name="label_24">
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>12</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>Lucro, em R$</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="2">
-      <widget class="QLabel" name="label_4">
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>12</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>PVC Ergométrico</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="1">
-      <widget class="QLabel" name="label_3">
-       <property name="text">
-        <string>PVC Verde</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="1">
-      <widget class="QLabel" name="label_8">
-       <property name="text">
-        <string>PVC Verde</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="0">
-      <widget class="QLabel" name="label_6">
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>12</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <family>Microsoft JhengHei</family>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Limite de Gasto com Materiais( em R$):</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="0">
-      <widget class="QLabel" name="label_7">
-       <property name="text">
-        <string>PVC Branco</string>
-       </property>
-      </widget>
-     </item>
-     <item row="20" column="3">
-      <widget class="QLineEdit" name="lucro"/>
-     </item>
-     <item row="2" column="0">
-      <widget class="QLabel" name="label_2">
-       <property name="text">
-        <string>PVC Branco</string>
-       </property>
-      </widget>
-     </item>
-     <item row="20" column="0">
-      <widget class="QLineEdit" name="quant_est_1"/>
-     </item>
-     <item row="20" column="2">
-      <widget class="QLineEdit" name="quant_est_3"/>
-     </item>
-     <item row="20" column="1">
-      <widget class="QLineEdit" name="quant_est_2"/>
-     </item>
-     <item row="3" column="1">
-      <widget class="QLineEdit" name="custo_pvc_v"/>
-     </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="label">
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>12</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <family>Microsoft JhengHei</family>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Custo dos Materiais(em R$):</string>
-       </property>
-      </widget>
-     </item>
-     <item row="17" column="0">
-      <widget class="QLabel" name="label_20">
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>12</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <family>Microsoft JhengHei</family>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Resultados:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="2">
-      <widget class="QLineEdit" name="custo_pvc_e"/>
-     </item>
-     <item row="3" column="0">
-      <widget class="QLineEdit" name="custo_pvc_b"/>
-     </item>
-     <item row="22" column="1">
-      <widget class="QPushButton" name="btn_calc">
-       <property name="text">
-        <string>Calcular</string>
-       </property>
-      </widget>
-     </item>
-     <item row="22" column="2">
-      <widget class="QPushButton" name="btn_sair">
-       <property name="text">
-        <string>Sair</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-  </widget>
- </widget>
- <resources/>
- <connections/>
-</ui>
+from pyomo.core.base.PyomoModel import ConcreteModel
+from pyomo.core.base.objective import Objective
+from pyomo.environ import *
+
+#? Definindo Variáveis globais -------------------------------
+
+# Custo de cada material por m2
+custo_pvc_b = 110
+custo_pvc_v = 90
+custo_pvc_e = 118
+
+# Limite máximo em dinheiro para gasto com material
+lim_pvc_b = 8000
+lim_pvc_v = 9000
+lim_pvc_e = 7000
+
+# Preço de venda de cada esteira;
+preco_est_1 = 755
+preco_est_2 = 534
+preco_est_3 = 822
+
+# Custo de produção
+num_func = 20
+aluguel = 20
+agua = 20
+custo_unidade = (num_func * 0.45) + aluguel + agua
+
+# Frete por metro quadrado de material
+frete = 3
+
+# Imposto sobre venda de unidade de esteira
+imposto = 0.1
+
+#? Definindo Funções -----------------------------------------
+    
+def otimiza (v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14):
+    custo_pvc_b, custo_pvc_v, custo_pvc_e = v1, v2, v3
+    lim_pvc_b, lim_pvc_v, lim_pvc_e = v4, v5, v6
+    preco_est_1, preco_est_2, preco_est_3 = v7, v8, v9
+    num_func, aluguel, agua = v10, v11, v12
+    frete, imposto = v13, v14
+
+    model = ConcreteModel()
+
+    # Variáveis
+    model.x1 = Var(within=NonNegativeReals)
+    model.x2 = Var(within=NonNegativeReals)
+    model.x3 = Var(within=NonNegativeReals)
+
+    # Dados
+    receita = (model.x1 * preco_est_1) + (model.x2 * preco_est_2) + (model.x3 * preco_est_3)
+    
+    custo_unidade = (num_func * 0.45) + aluguel + agua
+    custo_total_prod = custo_unidade * (model.x1 + model.x2 + model.x3)
+    imposto_total = imposto * (model.x1 + model.x2 + model.x3)
+    
+    custo_total_pvc_b = custo_pvc_b * ((model.x1 * 2) + (model.x2 * 3) + (model.x3 * 1))
+    custo_total_pvc_v = custo_pvc_v * ((model.x1 * 6) + (model.x2 * 5) + (model.x3 * 2))
+    custo_total_pvc_e = custo_pvc_e * ((model.x1 * 4) + (model.x2 * 1) + (model.x3 * 2))
+
+    # Função Objetivo
+    funcao_obj = receita - custo_total_prod - imposto_total - custo_total_pvc_b - custo_total_pvc_v - custo_total_pvc_e
+    model.obj = Objective(expr = funcao_obj, sense = maximize)
+
+    # Restrições
+
+    model.c1 = Constraint(expr = custo_total_pvc_b <= lim_pvc_b)
+    model.c2 = Constraint(expr = custo_total_pvc_v <= lim_pvc_v)
+    model.c3 = Constraint(expr = custo_total_pvc_e <= lim_pvc_e)
+    model.c4 = Constraint(expr = model.x1 >= 0)
+    model.c5 = Constraint(expr = model.x2 >= 0)
+    model.c6 = Constraint(expr = model.x3 >= 0)
+
+    optimizer = SolverFactory('glpk')
+    results = optimizer.solve(model, tee = True)
+
+    lucro_final = int(model.obj.expr())
+    x1_value = int(model.x1.value)
+    x2_value = int(model.x2.value)
+    x3_value = int(model.x3.value)
+
+    print("x1 =", x1_value)
+    print("x2 =", x2_value)
+    print("x3 =", x3_value)
+
+    status = results.solver.status
+    print("Status: ", status)
+
+    termination = results.solver.termination_condition
+    print("Critério de Parada: ", termination)
+
+    return x1_value, x2_value, x3_value, lucro_final
