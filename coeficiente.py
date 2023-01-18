@@ -17,6 +17,7 @@ class Ui_Calcula_Coeficiente(object):
         Calcula_Coeficiente.resize(800, 600)
         self.centralwidget = QtWidgets.QWidget(Calcula_Coeficiente)
         self.centralwidget.setObjectName("centralwidget")
+        self.centralwidget.setStyleSheet("background-color: rgb(115, 230, 227);")
         self.botao_calcula_coeficiente = QtWidgets.QPushButton(
             self.centralwidget)
         self.botao_calcula_coeficiente.setGeometry(
